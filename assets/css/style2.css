@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#main-block {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 100%;
+    min-height: 100vh;
+    place-items: center;
+}
+
+.boxes {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border: solid 1px black;
+}
+
+#box1 {
+    background-color: blue;
+    color: blue;
+}
+
+#box2 {
+    background-color: red;
+    color: red;
+}
+
+#box3 {
+    background-color: green;
+    color: green;
+}
+
+#box4 {
+    background-color: yellow;
+    color: yellow;
+}
+
+.generic-color {
+    background: black !important ;
+}
