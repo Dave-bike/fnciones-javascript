@@ -12,6 +12,15 @@
     place-items: center;
 }
 
+.box {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border: solid 1px black;
+}
+
 .boxes {
     display: grid;
     justify-content: center;

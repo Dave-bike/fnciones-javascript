@@ -1,7 +1,10 @@
-const mainBlock = document.querySelector("#main-block");
-mainBlock.addEventListener("click", ({ target: item }) => {
-  item.dataset.color === "boxes" && item.classList.toogle(".generic-color");
-});
+const mainBlock = document.querySelector("#main-block")
+
+const pintar = (item, color) => item.style.backgroundColor = color
+const boxes =  document.getElementsByClassName("boxes")
+for (let box of boxes) {
+  box.addEventListener("click", ({ target }) => pintar(target, "black"))
+}
 
 const pushKey = document.querySelector("#key");
 const color = { a: "pink", s: "orange", d: "skyblue" };
@@ -12,9 +15,11 @@ document.addEventListener("keydown", ({ key }) => {
   newBox[key] && newDiv(newBox[key]);
 });
 
+
 const newDiv = (color) => {
+  
   const template = document.createElement("div");
-  template.setAttribute("class", "boxes");
+  template.setAttribute("class", "box");
   template.setAttribute("style", `background : ${color};`);
   mainBlock.appendChild(template);
 };
